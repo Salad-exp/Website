@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salad Executor</title>
+    <style>
+        body {
+            background-image: url('background.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar" style="position: relative;">
+            <div class="logo">
+                <a href="index.html">Salad Executor</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://saladrbx.mintlify.app/">Documentation</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a href="https://discord.gg/saladexploits" class="btn btn-outline-success">Join Discord</a>
+        </nav>
+    </header>
+
+    <main>
+        <main>
+            <section id="home">
+                <h1 class="headline">A new era of cheating.</h1>
+                <p>Salad Executor is a new and upcoming executor. With working bypasses and more, you'll never look back.</p>
+                <a href="https://discord.gg/saladexploits" class="btn">Buy</a>
+                <!-- Added Showcase Button -->
+                <button class="btn" onclick="scrollToShowcase()">Showcase</button>
+
+            </section>
+            <section id="showcase" style="display: none;"> <!-- Initially hidden -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QL7B7Jn4-eo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        </main>
+
+        <script>
+function scrollToShowcase() {
+    var showcaseSection = document.getElementById('showcase');
+    // Toggle display property based on its current state
+    if (showcaseSection.style.display === 'none' || showcaseSection.style.display === '') {
+        showcaseSection.style.display = 'block'; // Make the showcase visible
+        showcaseSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the showcase section
+    } else {
+        showcaseSection.style.display = 'none'; // Hide the showcase
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link'); // Adjust the selector as needed
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the default link behavior
+            const url = this.href; // Get the href attribute of the clicked link
+
+            document.body.classList.add('page-exit'); // Add the animation class
+
+            setTimeout(() => {
+                window.location = url; // Redirect after the animation
+            }, 500); // Adjust the timing to match the length of your animation
+        });
+    });
+});
+</script>
+
+            
+        
+
+    <script src="main.js"></script>
+</body>
+</html>

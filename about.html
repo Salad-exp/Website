@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Salad Executor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this path is correct -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        .about-card {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+        }
+        .about-card:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .about-card h3 {
+            color: #fff;
+        }
+        .about-card p {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar" style="position: relative;">
+            <div class="logo">
+                <a href="index.html">Salad Executor</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://saladrbx.mintlify.app/">Documentation</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+            <a href="https://discord.gg/saladexploits" class="btn btn-outline-success">Join Discord</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about-container">
+            <div class="about-card">
+                <h3>What is Salad Executor?</h3>
+                <p>Salad Executor is designed to enhance gaming experiences by providing an advanced platform for executing game scripts securely and efficiently.</p>
+            </div>
+            <div class="about-card">
+                <h3>Our Philosophy</h3>
+                <p>We believe in power and performance, ensuring each update brings innovative features that set us apart in the gaming community.</p>
+            </div>
+            <div class="about-card">
+                <h3>Technology and Innovation</h3>
+                <p>At the core of Salad Executor, cutting-edge technology ensures a seamless user experience with top-notch security measures to protect our users.</p>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script> <!-- Assuming this script contains relevant JavaScript -->
+</body>
+</html>

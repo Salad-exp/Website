@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salad Executor Features</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming styles.css contains all your necessary CSS -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .feature-card h3 {
+            color: #fff;
+        }
+        .feature-card p {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar" style="position: relative;">
+            <div class="logo">
+                <a href="index.html">Salad Executor</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://saladrbx.mintlify.app/">Documentation</a></li>
+                <li><a href="features.html" class="active">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a href="https://discord.gg/saladexploits" class="btn btn-outline-success">Join Discord</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="features-container">
+            <div class="feature-card">
+                <h3>Fast Execution</h3>
+                <p>Enjoy rapid script execution that beats the competition.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Extensive Library</h3>
+                <p>Access a vast library of pre-made scripts and community contributions.</p>
+            </div>
+            <div class="feature-card">
+                <h3>User-Friendly Interface</h3>
+                <p>Navigate through an intuitive interface that makes cheating a breeze.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Regular Updates</h3>
+                <p>Benefit from regular updates ensuring compatibility with the latest Roblox updates.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Safe and Secure</h3>
+                <p>Use Salad Executor with confidence thanks to our commitment to security.</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link'); // Adjust the selector as needed
+        
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // Prevent the default link behavior
+                    const url = this.href; // Get the href attribute of the clicked link
+        
+                    document.body.classList.add('page-exit'); // Add the animation class
+        
+                    setTimeout(() => {
+                        window.location = url; // Redirect after the animation
+                    }, 500); // Adjust the timing to match the length of your animation
+                });
+            });
+        });
+        </script>
+        
+    <script src="scripts.js"></script> <!-- Include any necessary scripts -->
+</body>
+</html>

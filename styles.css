@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Root styling to ensure full height and specific styling across all elements */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #e0e0e0;
+    font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Detailed body styling for background images */
+body {
+    background-image: url('stars.svg'), radial-gradient(circle, rgba(73, 53, 0, 0.178), black);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: cover, cover;
+    position: relative;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+/* Navigation bar layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+/* Navigation link styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: auto;
+}
+
+/* Links within the navigation bar */
+.navbar .logo a, .nav-links a {
+    color: #D3D3D3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effects for links */
+.navbar .logo a:hover, .nav-links a:hover {
+    color: #A9A9A9;
+}
+
+/* Logo styling in the navbar */
+.navbar .logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(211,211,211,1) 50%, rgba(255,255,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease-in-out infinite;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Padding for navigation links */
+.nav-links li {
+    padding: 0 15px;
+}
+
+/* Button styling in the navigation bar */
+.btn {
+    animation: fade-in-button 1s ease 0s 1 normal none running;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Supreme', sans-serif; /* Ensure the 'Supreme' font is properly loaded */
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 32px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: none 0s ease 0s;
+    position: relative;
+    min-width: fit-content;
+    margin: 0px;
+    text-decoration: none; /* Removes underline from links styled as buttons */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect for buttons */
+
+button span {
+    color: rgb(255, 255, 255);
+    z-index: 3;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+}
+
+@keyframes fade-in-button {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 80vh;
+}
+
+/* Headline styling for prominence */
+.headline {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    margin: 20px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.425), 0 0 20px rgba(255, 255, 255, 0.425);
+    white-space: nowrap;
+}
+
+/* Footer styling for a consistent look */
+footer {
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    color: #D3D3D3;
+}
+
+/* Showcase section styling for transitions */
+#showcase {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+
+/* Styling for iframe within the showcase for visual consistency */
+#showcase iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.6);
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+/* Animations for fading and sliding effects */
+#showcase.visible {
+    display: block;
+    animation: fadeInSlideIn 0.5s forwards;
+}
+
+@keyframes fadeInSlideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutSlideOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+/* Keyframes for typewriter effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+}
+
+/* Remove underline from all buttons */
+button, .btn, a.btn, a {
+    text-decoration: none; /* Removes underline */
+}
+
+/* Specifically target <a> tags within button elements if needed */
+button a, .btn a {
+    text-decoration: none; /* Ensures no underline inside buttons */
+}
+
+/* CSS for page transition animation */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+    
+@keyframes fadeInScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
