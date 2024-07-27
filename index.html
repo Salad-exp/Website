@@ -23,9 +23,7 @@
                 <a href="index.html">Salad Executor</a>
             </div>
             <ul class="nav-links">
-                <li><a href="https://saladrbx.mintlify.app/">Documentation</a></li>
                 <li><a href="features.html">Features</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
             <a href="https://discord.gg/saladexploits" class="btn btn-outline-success">Join Discord</a>
@@ -35,29 +33,26 @@
     <main>
         <main>
             <section id="home">
-                <h1 class="headline">A new era of cheating.</h1>
-                <p>Salad Executor is a new and upcoming executor. With working bypasses and more, you'll never look back.</p>
-                <a href="https://discord.gg/saladexploits" class="btn">Buy</a>
+                <h1 class="headline">A brand new executor.</h1>
+                <p>Salad Executor is a recently launched exploit that offers a wide range of advantages.</p>
+                <button class="btn" onclick="get()">Get</button>
                 <!-- Added Showcase Button -->
-                <button class="btn" onclick="scrollToShowcase()">Showcase</button>
+                <button class="btn" onclick="showcase()">Showcase</button>
 
-            </section>
-            <section id="showcase" style="display: none;"> <!-- Initially hidden -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QL7B7Jn4-eo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </section>
         </main>
 
         <script>
-function scrollToShowcase() {
+//i prefer this yes
+function showcase() {
     var showcaseSection = document.getElementById('showcase');
-    // Toggle display property based on its current state
-    if (showcaseSection.style.display === 'none' || showcaseSection.style.display === '') {
-        showcaseSection.style.display = 'block'; // Make the showcase visible
-        showcaseSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the showcase section
-    } else {
-        showcaseSection.style.display = 'none'; // Hide the showcase
-    }
+    window.open('https://www.youtube.com/watch?v=2Ek8ZphrRio', '_blank');
 }
+function get() {
+    var showcaseSection = document.getElementById('showcase');
+    window.open('https://discord.gg/saladexploits', '_blank');
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-link'); // Adjust the selector as needed
