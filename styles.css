@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
-/* Root styling to ensure full height and specific styling across all elements */
 html, body {
     height: 100%;
     margin: 0;
@@ -12,7 +11,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Detailed body styling for background images */
 body {
     background-image: url('stars.svg'), radial-gradient(circle, rgba(73, 53, 0, 0.178), black);
     background-repeat: no-repeat, no-repeat;
@@ -21,7 +19,6 @@ body {
     position: relative;
 }
 
-/* Header styling */
 header {
     width: 100%;
     padding: 1rem 2rem;
@@ -30,7 +27,6 @@ header {
     z-index: 10;
 }
 
-/* Navigation bar layout */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -38,7 +34,6 @@ header {
     padding-right: 3rem;
 }
 
-/* Navigation link styling */
 .nav-links {
     list-style: none;
     display: flex;
@@ -47,19 +42,16 @@ header {
     margin-right: auto;
 }
 
-/* Links within the navigation bar */
 .navbar .logo a, .nav-links a {
     color: #D3D3D3;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Hover effects for links */
 .navbar .logo a:hover, .nav-links a:hover {
     color: #A9A9A9;
 }
 
-/* Logo styling in the navbar */
 .navbar .logo a {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
@@ -72,18 +64,16 @@ header {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-/* Padding for navigation links */
 .nav-links li {
     padding: 0 15px;
 }
 
-/* Button styling in the navigation bar */
 .btn {
     animation: fade-in-button 1s ease 0s 1 normal none running;
     padding: 8px 20px;
     background: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.8);
-    font-family: 'Supreme', sans-serif; /* Ensure the 'Supreme' font is properly loaded */
+    font-family: 'Supreme', sans-serif; 
     font-size: 16px;
     line-height: 24px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -94,13 +84,11 @@ header {
     position: relative;
     min-width: fit-content;
     margin: 0px;
-    text-decoration: none; /* Removes underline from links styled as buttons */
+    text-decoration: none; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
-
-/* Hover effect for buttons */
 
 button span {
     color: rgb(255, 255, 255);
@@ -121,7 +109,6 @@ button span {
     }
 }
 
-/* Main content styling */
 main {
     display: flex;
     justify-content: center;
@@ -131,7 +118,6 @@ main {
     height: 80vh;
 }
 
-/* Headline styling for prominence */
 .headline {
     font-size: 5rem;
     font-weight: 900;
@@ -141,7 +127,6 @@ main {
     white-space: nowrap;
 }
 
-/* Footer styling for a consistent look */
 footer {
     text-align: center;
     padding: 1rem;
@@ -153,7 +138,6 @@ footer {
     color: #D3D3D3;
 }
 
-/* Showcase section styling for transitions */
 #showcase {
     display: none;
     width: 100%;
@@ -163,7 +147,6 @@ footer {
     margin: 20px auto;
 }
 
-/* Styling for iframe within the showcase for visual consistency */
 #showcase iframe {
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.6);
@@ -172,7 +155,6 @@ footer {
     padding: 20px 0;
 }
 
-/* Animations for fading and sliding effects */
 #showcase.visible {
     display: block;
     animation: fadeInSlideIn 0.5s forwards;
@@ -200,7 +182,6 @@ footer {
     }
 }
 
-/* Keyframes for typewriter effect */
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -216,17 +197,14 @@ footer {
     50% { background-position: 100% 50% }
 }
 
-/* Remove underline from all buttons */
 button, .btn, a.btn, a {
-    text-decoration: none; /* Removes underline */
+    text-decoration: none; 
 }
 
-/* Specifically target <a> tags within button elements if needed */
 button a, .btn a {
-    text-decoration: none; /* Ensures no underline inside buttons */
+    text-decoration: none; 
 }
 
-/* CSS for page transition animation */
 @keyframes fadeOut {
     from { opacity: 1; }
     to { opacity: 0; }
