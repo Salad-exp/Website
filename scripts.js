@@ -1,15 +1,16 @@
+//website wasnt made by me btw
 function toggleShowcase() {
     var showcaseSection = document.getElementById('showcase');
     if (showcaseSection.classList.contains('visible')) {
-        showcaseSection.style.animation = 'fadeOutSlideOut 0.5s forwards'; // Animate sliding out and fading
+        showcaseSection.style.animation = 'fadeOutSlideOut 0.5s forwards'; 
         setTimeout(() => {
             showcaseSection.classList.remove('visible');
-            showcaseSection.style.display = 'none'; // Hide after animation
-        }, 500); // Ensure timing matches the animation duration
+            showcaseSection.style.display = 'none'; 
+        }, 500); 
     } else {
-        showcaseSection.style.display = 'block'; // Show immediately for animation
+        showcaseSection.style.display = 'block'; 
         setTimeout(() => {
-            showcaseSection.classList.add('visible'); // Start slide-in and fade-in animation
+            showcaseSection.classList.add('visible'); 
         }, 10);
     }
 }
@@ -41,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Adjust styles on load and when resizing the window
     adjustStylesForMobile();
     window.onresize = adjustStylesForMobile;
 });
