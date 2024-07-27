@@ -36,7 +36,6 @@
                 <h1 class="headline">A brand new executor.</h1>
                 <p>Salad Executor is a recently launched exploit that offers a wide range of advantages.</p>
                 <button class="btn" onclick="get()">Get</button>
-                <!-- Added Showcase Button -->
                 <button class="btn" onclick="showcase()">Showcase</button>
 
             </section>
@@ -55,18 +54,18 @@ function get() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-link'); // Adjust the selector as needed
+    const navLinks = document.querySelectorAll('.nav-link'); 
 
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent the default link behavior
-            const url = this.href; // Get the href attribute of the clicked link
+            e.preventDefault(); 
+            const url = this.href;
 
-            document.body.classList.add('page-exit'); // Add the animation class
+            document.body.classList.add('page-exit');
 
             setTimeout(() => {
-                window.location = url; // Redirect after the animation
-            }, 500); // Adjust the timing to match the length of your animation
+                window.location = url; 
+            }, 500); 
         });
     });
 });
